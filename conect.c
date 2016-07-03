@@ -23,7 +23,7 @@ struct list *get_list(void){
 	struct list *p,*newp;
 
 	p=NULL;
-	while((dget_data())!=EOD){
+	while((d=get_data())!=EOD){
 		newp=(struct list*)malloc(sizeof(struct list));
 	newp->key =d;
 	newp->next=p;
