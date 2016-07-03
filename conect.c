@@ -93,13 +93,13 @@
 			scanf("%d%d",&num,&plase);
 			new1=(struct list *)maloc(sizeof(struct list));
 			new1->key=num;
-			insert_after(new1,lp->next);
+			insert_after(new1,lp->next ); //plaseで場所の選択ができるようにしたい
 			print_list(lp);
 
 			case'D':
 			printf("which list is deleate ");
 			scanf("%d",&plase);
-			delete_it(lp->next);
+			delete_it(lp->next 
 			print_list(lp);
 		}
 
