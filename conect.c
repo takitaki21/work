@@ -15,7 +15,7 @@ void delete_it(struct list *p);
 int get_data(void);
 
 #define EOD -1
-int a[]={1,2,3,4,5,6,EOD};
+int a[]={1 ,2 , 3, 4, 5, 6, EOD};
 
 
 struct list *get_list(void){
@@ -39,7 +39,7 @@ return a[i++];
 
 void print_list(struct list *p){
 	while(p!=NULL){
-		printf("%d",p->key);
+		printf("%d ",p->key);
 		p=p->next;
 	}
 
@@ -76,7 +76,7 @@ void delete_it(struct list *p){
 }
 
 int main (void){
-	struct list *lp,*new1,new2;
+	struct list *lp,*new1,*new2;
    
     lp = get_list();
     print_list(lp);
