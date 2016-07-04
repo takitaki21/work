@@ -14,8 +14,10 @@
 	void delete_it(struct list *p);
 	int get_data(void);
 
+
 	#define EOD -1
 	int a[]={1 ,2 , 3, 4, 5, 6, EOD};
+
 
 
 	struct list *get_list(void){
@@ -77,12 +79,12 @@
 
 	int main (void){
 	char c=10;
-	int plase,num;
+	int num;
 		struct list *lp,*new1;
 		lp=get_list();
 		print_list(lp);
 
-		printf("what is done?\tE.end\tA.addition\tD.delete\n");
+		printf("what is done?\tE.end\nA.addition\tD.delete\tP.print\n");
 		while(c!='E'){
 		scanf("%c",&c);
 
@@ -90,19 +92,20 @@
 		switch(c){
 			case'A':
 			printf("add number & which is it addition");
-			scanf("%d%d",&num,&plase);
+			scanf("%d,%d",&num,i);
 			new1=(struct list *)maloc(sizeof(struct list));
 			new1->key=num;
 			insert_after(new1,lp->next ); //plaseで場所の選択ができるようにしたい
-			print_list(lp);
+			
 
 			case'D':
 			printf("which list is deleate ");
-			scanf("%d",&plase);
-			delete_it(lp->next 
-			print_list(lp);
-		}
-
+			scanf("%d",&i);
+			delete_it(lp->next);
+			
+		    case'P':
+		    print_list(lp);
+}
 	        fflush(stdin);
 	        printf("what is done?\tE.end\tA.addition\tD.delete\n");
 	}
